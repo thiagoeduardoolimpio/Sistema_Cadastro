@@ -12,7 +12,7 @@ namespace SistemaCadastro
 
 
         MySqlConnection conexao = new MySqlConnection("server=localhost;user id=root; password=thiago260507.;database=bancocadastro");
-    public string mensagem;
+        public string mensagem;
         public bool insereBanda(Banda novaBanda)
         {
             try
@@ -33,10 +33,34 @@ namespace SistemaCadastro
                 mensagem = erro.Message;
                 return false;
             }
-
         }
 
+        public DataTable listaGeneros()
+        {
+            // comentario
+            MySqlCommand cmd = new MySqlCommand("sp_listaGeneros", conexao);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                conexao.Open();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable tabela = new DataTable();
+                da.Fill(tabela);
+                return tabela;
+            }// fim try
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return null;
+            }
+            finally
+            {
+                conexao.Close();
+            }
 
+        }// fim lista_generos 
 
     }
+
+
 }

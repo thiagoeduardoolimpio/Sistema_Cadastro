@@ -48,9 +48,17 @@ namespace SistemaCadastro
 
         private void Sistema_Load(object sender, EventArgs e)
         {
-         
+            listaCBGeneros();
         }
-
+        public void listaCBGeneros()
+        {
+            conectaBanco con = new conectaBanco();
+            DataTable tabelaDados = new DataTable();
+            tabelaDados = con.listaGeneros();
+            cbGenero.DataSource = tabelaDados;
+            cbGenero.DisplayMember = "genero";
+            cbGenero.ValueMember = "idgenero";
+        }
 
 
 
@@ -81,6 +89,15 @@ namespace SistemaCadastro
           
         }
 
+        void limpaCampos()
+        {
+            txtnome.Clear();
+            cbGenero.Text = "";
+            txtintegrantes.Clear();
+            txtranking.Clear();
+            txtnome.Focus();
+        }
+
         private void BtnConfirmaCadastro_Click(object sender, EventArgs e)
         {
             conectaBanco con = new conectaBanco();
@@ -88,11 +105,17 @@ namespace SistemaCadastro
             novaBanda.Nome = txtnome.Text;
             novaBanda.Integrantes = Convert.ToInt32(txtintegrantes.Text);
             novaBanda.Ranking = Convert.ToInt32(txtranking.Text);
-            novaBanda.Genero = 1;
+            novaBanda.Genero = Convert.ToInt32(cbGenero.SelectedValue.ToString());
             bool retorno = con.insereBanda(novaBanda);
             if (retorno == false)
                 MessageBox.Show(con.mensagem);
 
+            limpaCampos();
+
+        }
+
+        private void cbGenero_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
