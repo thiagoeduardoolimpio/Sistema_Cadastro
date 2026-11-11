@@ -49,6 +49,8 @@ namespace SistemaCadastro
         private void Sistema_Load(object sender, EventArgs e)
         {
             listaCBGeneros();
+            lista_gridBandas();
+
         }
         public void listaCBGeneros()
         {
@@ -59,12 +61,17 @@ namespace SistemaCadastro
             cbGenero.DisplayMember = "genero";
             cbGenero.ValueMember = "idgenero";
         }
-
-
+        void lista_gridBandas()
+        {
+            conectaBanco con = new conectaBanco();
+            dgBandas.DataSource = con.listaBandas();
+        }
 
         private void txtBusca_TextChanged(object sender, EventArgs e)
         {
-  
+            (dgBandas.DataSource as DataTable).DefaultView.RowFilter =
+                string.Format("nome like '{0}%'", txtBusca.Text);
+        
         }
 
         private void btnRemoveBanda_Click(object sender, EventArgs e)
