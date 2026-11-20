@@ -57,9 +57,33 @@ namespace SistemaCadastro
             }
         }// fim deletaBanda 
 
+        public bool alteraBanda(Banda b, int idbanda)
+        {
+            MySqlCommand cmd = new MySqlCommand("sp_alteraBanda", conexao);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("idbanda", idbanda);
+            cmd.Parameters.AddWithValue("nome", b.Nome);
+            cmd.Parameters.AddWithValue("genero", b.Genero);
+            cmd.Parameters.AddWithValue("integrantes", b.Integrantes);
+            cmd.Parameters.AddWithValue("ranking", b.Ranking);
+            try
+            {
+                conexao.Open();
+                cmd.ExecuteNonQuery(); // executa o comando
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }// fim update_banda  
 
-
-public DataTable listaGeneros()
+        public DataTable listaGeneros()
         {
             // comentario
             MySqlCommand cmd = new MySqlCommand("sp_listaGeneros", conexao);
