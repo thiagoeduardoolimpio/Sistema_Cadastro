@@ -135,7 +135,10 @@ namespace SistemaCadastro
 
         private void bntAddGenero_Click(object sender, EventArgs e)
         {
-          
+            FrmAddGenero formGenero = new FrmAddGenero();
+            this.Hide();
+            formGenero.ShowDialog();
+            this.Close();
         }
 
         void limpaCampos()
