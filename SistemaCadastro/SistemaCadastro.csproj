@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banda.cs" />
+    <Compile Include="Biblioteca.cs" />
     <Compile Include="conectaBanco.cs" />
     <Compile Include="FrmAddGenero.cs">
       <SubType>Form</SubType>
