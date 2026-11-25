@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{96CFD860-8402-4B0B-B0D9-65A990C45932}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SistemaCadastro</RootNamespace>
-    <AssemblyName>SistemaCadastro</AssemblyName>
+    <RootNamespace>SistemaFarmacia</RootNamespace>
+    <AssemblyName>SistemaFarmacia</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -102,14 +102,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Banda.cs" />
+    <Compile Include="Pedido.cs" />
     <Compile Include="Biblioteca.cs" />
     <Compile Include="conectaBanco.cs" />
-    <Compile Include="FrmAddGenero.cs">
+    <Compile Include="FrmAddForma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAddGenero.Designer.cs">
-      <DependentUpon>FrmAddGenero.cs</DependentUpon>
+    <Compile Include="FrmAddForma.Designer.cs">
+      <DependentUpon>FrmAddForma.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -125,8 +125,8 @@
     <Compile Include="Sistema.Designer.cs">
       <DependentUpon>Sistema.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FrmAddGenero.resx">
-      <DependentUpon>FrmAddGenero.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAddForma.resx">
+      <DependentUpon>FrmAddForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -159,7 +159,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\rock-and-roll.png" />
+    <None Include="Resources\farmacia.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\adicionar.png" />

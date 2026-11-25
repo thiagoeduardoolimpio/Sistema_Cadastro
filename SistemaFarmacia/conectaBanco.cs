@@ -6,26 +6,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-namespace SistemaCadastro
+namespace SistemaFarmacia
 {
     internal class conectaBanco
     {
 
 
-        MySqlConnection conexao = new MySqlConnection("server=localhost;user id=root; password=thiago260507.;database=bancocadastro");
+        MySqlConnection conexao = new MySqlConnection("server=localhost;user id=root; password=thiago260507.;database=bancofarmacia");
         public string mensagem;
-        public bool insereBanda(Banda novaBanda)
+        public bool inserePedido(Pedido novoPedido)
         {
             try
             {
                 conexao.Open();
                 MySqlCommand cmd =
-                    new MySqlCommand("sp_insereBanda", conexao);
+                    new MySqlCommand("sp_inserePedido", conexao);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("p_nome", novaBanda.Nome);
-                cmd.Parameters.AddWithValue("p_integrantes", novaBanda.Integrantes);
-                cmd.Parameters.AddWithValue("p_ranking", novaBanda.Ranking);
-                cmd.Parameters.AddWithValue("p_genero", novaBanda.Genero);
+                cmd.Parameters.AddWithValue("p_paciente", novoPedido.Paciente);
+                cmd.Parameters.AddWithValue("p_quantidade", novoPedido.Quantidade);
+                cmd.Parameters.AddWithValue("p_prioridade", novoPedido.Prioridade);
+                cmd.Parameters.AddWithValue("p_forma", novoPedido.Forma);
                 cmd.ExecuteNonQuery();//executar no banco
                 return true;
             }
@@ -35,11 +35,11 @@ namespace SistemaCadastro
                 return false;
             }
         }
-        public bool deletaBanda(int idRemovebanda)
+        public bool deletaPedido(int idRemovePedido)
         {
-            MySqlCommand cmd = new MySqlCommand("sp_removeBanda", conexao);
+            MySqlCommand cmd = new MySqlCommand("sp_removePedido", conexao);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("idbanda", idRemovebanda);
+            cmd.Parameters.AddWithValue("idpedido", idRemovePedido);
             try
             {
                 conexao.Open();
@@ -55,17 +55,17 @@ namespace SistemaCadastro
             {
                 conexao.Close();
             }
-        }// fim deletaBanda 
+        }// fim deletaPedido 
 
-        public bool alteraBanda(Banda b, int idbanda)
+        public bool alteraPedido(Pedido b, int idpedido)
         {
-            MySqlCommand cmd = new MySqlCommand("sp_alteraBanda", conexao);
+            MySqlCommand cmd = new MySqlCommand("sp_alteraPedido", conexao);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("idbanda", idbanda);
-            cmd.Parameters.AddWithValue("nome", b.Nome);
-            cmd.Parameters.AddWithValue("genero", b.Genero);
-            cmd.Parameters.AddWithValue("integrantes", b.Integrantes);
-            cmd.Parameters.AddWithValue("ranking", b.Ranking);
+            cmd.Parameters.AddWithValue("p_idpedido", idpedido);
+            cmd.Parameters.AddWithValue("p_paciente", b.Paciente);
+            cmd.Parameters.AddWithValue("p_forma", b.Forma);
+            cmd.Parameters.AddWithValue("p_quantidade", b.Quantidade);
+            cmd.Parameters.AddWithValue("p_prioridade", b.Prioridade);
             try
             {
                 conexao.Open();
@@ -81,7 +81,7 @@ namespace SistemaCadastro
             {
                 conexao.Close();
             }
-        }// fim update_banda  
+        }// fim update_pedido  
         public bool verifica(string user, string pass)
         {
             string senhaHash = Biblioteca.makeHash(pass);
@@ -112,15 +112,15 @@ namespace SistemaCadastro
             }
         }
 
-        public bool insereGenero(string nomeGenero)
+        public bool insereForma(string nomeForma)
         {
             try
             {
                 conexao.Open();
                 MySqlCommand cmd =
-                    new MySqlCommand("sp_insereGenero", conexao);
+                    new MySqlCommand("sp_insereForma", conexao);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("nomeGenero", nomeGenero);
+                cmd.Parameters.AddWithValue("nomeForma", nomeForma);
                 cmd.ExecuteNonQuery();//executar no banco
                 return true;
             }
@@ -130,13 +130,13 @@ namespace SistemaCadastro
                 return false;
             }
 
-        }// fim do insereGenero
+        }// fim do insereForma
 
 
-        public DataTable listaGeneros()
+        public DataTable listaFormas()
         {
             // comentario
-            MySqlCommand cmd = new MySqlCommand("sp_listaGeneros", conexao);
+            MySqlCommand cmd = new MySqlCommand("sp_listaFormas", conexao);
             cmd.CommandType = CommandType.StoredProcedure;
             try
             {
@@ -156,11 +156,11 @@ namespace SistemaCadastro
                 conexao.Close();
             }
 
-        }// fim lista_generos 
+        }// fim lista_formas 
 
-        public DataTable listaBandas()
+        public DataTable listaPedidos()
         {
-            MySqlCommand cmd = new MySqlCommand("sp_listaBandas", conexao);
+            MySqlCommand cmd = new MySqlCommand("sp_listaPedidos", conexao);
             cmd.CommandType = CommandType.StoredProcedure;
             try
             {
@@ -180,7 +180,7 @@ namespace SistemaCadastro
                 conexao.Close();
             }
 
-        }// fim lista_bandas
+        }// fim lista_pedidos
 
     }
 

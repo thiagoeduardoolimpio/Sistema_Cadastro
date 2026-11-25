@@ -1,4 +1,4 @@
-﻿namespace SistemaCadastro
+﻿namespace SistemaFarmacia
 {
     partial class FrmLogin
     {
@@ -94,7 +94,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnLogin.ForeColor = System.Drawing.Color.DimGray;
-            this.btnLogin.Image = global::SistemaCadastro.Properties.Resources.adicionar;
+            this.btnLogin.Image = global::SistemaFarmacia.Properties.Resources.adicionar;
             this.btnLogin.Location = new System.Drawing.Point(206, 403);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogin.Name = "btnLogin";

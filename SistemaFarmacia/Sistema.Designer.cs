@@ -1,4 +1,4 @@
-﻿namespace SistemaCadastro
+﻿namespace SistemaFarmacia
 {
     partial class Sistema
     {
@@ -40,28 +40,28 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabCadastrar = new System.Windows.Forms.TabPage();
-            this.bntAddGenero = new System.Windows.Forms.Button();
-            this.cbGenero = new System.Windows.Forms.ComboBox();
-            this.txtranking = new System.Windows.Forms.TextBox();
+            this.bntAddForma = new System.Windows.Forms.Button();
+            this.cbForma = new System.Windows.Forms.ComboBox();
+            this.txtprioridade = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnConfirmaCadastro = new System.Windows.Forms.Button();
-            this.txtintegrantes = new System.Windows.Forms.TextBox();
-            this.txtnome = new System.Windows.Forms.TextBox();
+            this.txtquantidade = new System.Windows.Forms.TextBox();
+            this.txtpaciente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabBuscar = new System.Windows.Forms.TabPage();
             this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnRemoveBanda = new System.Windows.Forms.Button();
+            this.btnRemovePedido = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtBusca = new System.Windows.Forms.TextBox();
-            this.dgBandas = new System.Windows.Forms.DataGridView();
+            this.dgPedidos = new System.Windows.Forms.DataGridView();
             this.tabAlterar = new System.Windows.Forms.TabPage();
-            this.cbAlteraGenero = new System.Windows.Forms.ComboBox();
-            this.txtAlteraRanking = new System.Windows.Forms.TextBox();
+            this.cbAlteraForma = new System.Windows.Forms.ComboBox();
+            this.txtAlteraPrioridade = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtAlteraIntegrantes = new System.Windows.Forms.TextBox();
-            this.txtAlteraNome = new System.Windows.Forms.TextBox();
+            this.txtAlteraQuantidade = new System.Windows.Forms.TextBox();
+            this.txtAlteraPaciente = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -75,7 +75,7 @@
             this.tabControl1.SuspendLayout();
             this.tabCadastrar.SuspendLayout();
             this.tabBuscar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgBandas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPedidos)).BeginInit();
             this.tabAlterar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,7 +113,7 @@
             this.btnBusca.Name = "btnBusca";
             this.btnBusca.Size = new System.Drawing.Size(262, 94);
             this.btnBusca.TabIndex = 5;
-            this.btnBusca.Text = "&Buscar";
+            this.btnBusca.Text = "Con&sultar";
             this.btnBusca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBusca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBusca.UseVisualStyleBackColor = true;
@@ -177,11 +177,11 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(256, 30);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Controle de Bandas";
+            this.label1.Text = "Controle de Pedidos";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SistemaCadastro.Properties.Resources.rock_and_roll;
+            this.pictureBox1.Image = global::SistemaFarmacia.Properties.Resources.farmacia;
             this.pictureBox1.Location = new System.Drawing.Point(14, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox1.Name = "pictureBox1";
@@ -206,13 +206,13 @@
             // tabCadastrar
             // 
             this.tabCadastrar.BackColor = System.Drawing.Color.White;
-            this.tabCadastrar.Controls.Add(this.bntAddGenero);
-            this.tabCadastrar.Controls.Add(this.cbGenero);
-            this.tabCadastrar.Controls.Add(this.txtranking);
+            this.tabCadastrar.Controls.Add(this.bntAddForma);
+            this.tabCadastrar.Controls.Add(this.cbForma);
+            this.tabCadastrar.Controls.Add(this.txtprioridade);
             this.tabCadastrar.Controls.Add(this.label6);
             this.tabCadastrar.Controls.Add(this.BtnConfirmaCadastro);
-            this.tabCadastrar.Controls.Add(this.txtintegrantes);
-            this.tabCadastrar.Controls.Add(this.txtnome);
+            this.tabCadastrar.Controls.Add(this.txtquantidade);
+            this.tabCadastrar.Controls.Add(this.txtpaciente);
             this.tabCadastrar.Controls.Add(this.label3);
             this.tabCadastrar.Controls.Add(this.label2);
             this.tabCadastrar.Controls.Add(this.label4);
@@ -224,44 +224,44 @@
             this.tabCadastrar.TabIndex = 0;
             this.tabCadastrar.Text = "Cadastrar";
             // 
-            // bntAddGenero
+            // bntAddForma
             // 
-            this.bntAddGenero.FlatAppearance.BorderSize = 0;
-            this.bntAddGenero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntAddGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.bntAddGenero.ForeColor = System.Drawing.Color.DimGray;
-            this.bntAddGenero.Image = global::SistemaCadastro.Properties.Resources.botao_adicionar__1_;
-            this.bntAddGenero.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntAddGenero.Location = new System.Drawing.Point(1233, 97);
-            this.bntAddGenero.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.bntAddGenero.Name = "bntAddGenero";
-            this.bntAddGenero.Size = new System.Drawing.Size(86, 67);
-            this.bntAddGenero.TabIndex = 15;
-            this.bntAddGenero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntAddGenero.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bntAddGenero.UseVisualStyleBackColor = true;
-            this.bntAddGenero.Click += new System.EventHandler(this.bntAddGenero_Click);
+            this.bntAddForma.FlatAppearance.BorderSize = 0;
+            this.bntAddForma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntAddForma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.bntAddForma.ForeColor = System.Drawing.Color.DimGray;
+            this.bntAddForma.Image = global::SistemaFarmacia.Properties.Resources.botao_adicionar__1_;
+            this.bntAddForma.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntAddForma.Location = new System.Drawing.Point(1233, 97);
+            this.bntAddForma.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bntAddForma.Name = "bntAddForma";
+            this.bntAddForma.Size = new System.Drawing.Size(86, 67);
+            this.bntAddForma.TabIndex = 15;
+            this.bntAddForma.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntAddForma.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bntAddForma.UseVisualStyleBackColor = true;
+            this.bntAddForma.Click += new System.EventHandler(this.bntAddForma_Click);
             // 
-            // cbGenero
+            // cbForma
             // 
-            this.cbGenero.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbGenero.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cbGenero.FormattingEnabled = true;
-            this.cbGenero.Location = new System.Drawing.Point(264, 102);
-            this.cbGenero.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cbGenero.Name = "cbGenero";
-            this.cbGenero.Size = new System.Drawing.Size(956, 53);
-            this.cbGenero.TabIndex = 10;
-            this.cbGenero.SelectedIndexChanged += new System.EventHandler(this.cbGenero_SelectedIndexChanged);
+            this.cbForma.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbForma.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cbForma.FormattingEnabled = true;
+            this.cbForma.Location = new System.Drawing.Point(264, 102);
+            this.cbForma.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cbForma.Name = "cbForma";
+            this.cbForma.Size = new System.Drawing.Size(956, 53);
+            this.cbForma.TabIndex = 10;
+            this.cbForma.SelectedIndexChanged += new System.EventHandler(this.cbForma_SelectedIndexChanged);
             // 
-            // txtranking
+            // txtprioridade
             // 
-            this.txtranking.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtranking.Location = new System.Drawing.Point(264, 252);
-            this.txtranking.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtranking.Name = "txtranking";
-            this.txtranking.Size = new System.Drawing.Size(956, 44);
-            this.txtranking.TabIndex = 12;
+            this.txtprioridade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtprioridade.Location = new System.Drawing.Point(264, 252);
+            this.txtprioridade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtprioridade.Name = "txtprioridade";
+            this.txtprioridade.Size = new System.Drawing.Size(956, 44);
+            this.txtprioridade.TabIndex = 12;
             // 
             // label6
             // 
@@ -273,7 +273,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(143, 37);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Ranking:";
+            this.label6.Text = "Prioridade:";
             // 
             // BtnConfirmaCadastro
             // 
@@ -281,7 +281,7 @@
             this.BtnConfirmaCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConfirmaCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.BtnConfirmaCadastro.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnConfirmaCadastro.Image = global::SistemaCadastro.Properties.Resources.adicionar;
+            this.BtnConfirmaCadastro.Image = global::SistemaFarmacia.Properties.Resources.adicionar;
             this.BtnConfirmaCadastro.Location = new System.Drawing.Point(570, 333);
             this.BtnConfirmaCadastro.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.BtnConfirmaCadastro.Name = "BtnConfirmaCadastro";
@@ -293,23 +293,23 @@
             this.BtnConfirmaCadastro.UseVisualStyleBackColor = true;
             this.BtnConfirmaCadastro.Click += new System.EventHandler(this.BtnConfirmaCadastro_Click);
             // 
-            // txtintegrantes
+            // txtquantidade
             // 
-            this.txtintegrantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtintegrantes.Location = new System.Drawing.Point(264, 175);
-            this.txtintegrantes.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.txtintegrantes.Name = "txtintegrantes";
-            this.txtintegrantes.Size = new System.Drawing.Size(956, 44);
-            this.txtintegrantes.TabIndex = 11;
+            this.txtquantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtquantidade.Location = new System.Drawing.Point(264, 175);
+            this.txtquantidade.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtquantidade.Name = "txtquantidade";
+            this.txtquantidade.Size = new System.Drawing.Size(956, 44);
+            this.txtquantidade.TabIndex = 11;
             // 
-            // txtnome
+            // txtpaciente
             // 
-            this.txtnome.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtnome.Location = new System.Drawing.Point(264, 17);
-            this.txtnome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(956, 50);
-            this.txtnome.TabIndex = 9;
+            this.txtpaciente.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtpaciente.Location = new System.Drawing.Point(264, 17);
+            this.txtpaciente.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtpaciente.Name = "txtpaciente";
+            this.txtpaciente.Size = new System.Drawing.Size(956, 50);
+            this.txtpaciente.TabIndex = 9;
             // 
             // label3
             // 
@@ -321,7 +321,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(185, 37);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Integrantes:";
+            this.label3.Text = "Quantidade:";
             // 
             // label2
             // 
@@ -333,7 +333,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 37);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Genero:";
+            this.label2.Text = "Forma:";
             // 
             // label4
             // 
@@ -345,23 +345,23 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 37);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Nome:";
+            this.label4.Text = "Paciente:";
             // 
             // tabBuscar
             // 
             this.tabBuscar.BackColor = System.Drawing.Color.White;
             this.tabBuscar.Controls.Add(this.btnAlterar);
-            this.tabBuscar.Controls.Add(this.btnRemoveBanda);
+            this.tabBuscar.Controls.Add(this.btnRemovePedido);
             this.tabBuscar.Controls.Add(this.label5);
             this.tabBuscar.Controls.Add(this.txtBusca);
-            this.tabBuscar.Controls.Add(this.dgBandas);
+            this.tabBuscar.Controls.Add(this.dgPedidos);
             this.tabBuscar.Location = new System.Drawing.Point(8, 44);
             this.tabBuscar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabBuscar.Name = "tabBuscar";
             this.tabBuscar.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabBuscar.Size = new System.Drawing.Size(1328, 482);
             this.tabBuscar.TabIndex = 1;
-            this.tabBuscar.Text = "Buscar";
+            this.tabBuscar.Text = "Consultar";
             // 
             // btnAlterar
             // 
@@ -382,24 +382,24 @@
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
-            // btnRemoveBanda
+            // btnRemovePedido
             // 
-            this.btnRemoveBanda.FlatAppearance.BorderSize = 0;
-            this.btnRemoveBanda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveBanda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnRemoveBanda.ForeColor = System.Drawing.Color.DimGray;
-            this.btnRemoveBanda.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveBanda.Image")));
-            this.btnRemoveBanda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemoveBanda.Location = new System.Drawing.Point(726, 9);
-            this.btnRemoveBanda.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.btnRemoveBanda.Name = "btnRemoveBanda";
-            this.btnRemoveBanda.Size = new System.Drawing.Size(244, 88);
-            this.btnRemoveBanda.TabIndex = 14;
-            this.btnRemoveBanda.Text = "Remover";
-            this.btnRemoveBanda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemoveBanda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRemoveBanda.UseVisualStyleBackColor = true;
-            this.btnRemoveBanda.Click += new System.EventHandler(this.btnRemoveBanda_Click);
+            this.btnRemovePedido.FlatAppearance.BorderSize = 0;
+            this.btnRemovePedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemovePedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRemovePedido.ForeColor = System.Drawing.Color.DimGray;
+            this.btnRemovePedido.Image = ((System.Drawing.Image)(resources.GetObject("btnRemovePedido.Image")));
+            this.btnRemovePedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemovePedido.Location = new System.Drawing.Point(726, 9);
+            this.btnRemovePedido.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnRemovePedido.Name = "btnRemovePedido";
+            this.btnRemovePedido.Size = new System.Drawing.Size(244, 88);
+            this.btnRemovePedido.TabIndex = 14;
+            this.btnRemovePedido.Text = "Remover";
+            this.btnRemovePedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemovePedido.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRemovePedido.UseVisualStyleBackColor = true;
+            this.btnRemovePedido.Click += new System.EventHandler(this.btnRemovePedido_Click);
             // 
             // label5
             // 
@@ -409,7 +409,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 30);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Banda:";
+            this.label5.Text = "Paciente:";
             // 
             // txtBusca
             // 
@@ -421,27 +421,27 @@
             this.txtBusca.TabIndex = 1;
             this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
             // 
-            // dgBandas
+            // dgPedidos
             // 
-            this.dgBandas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgBandas.BackgroundColor = System.Drawing.Color.White;
-            this.dgBandas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgBandas.Location = new System.Drawing.Point(84, 106);
-            this.dgBandas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dgBandas.Name = "dgBandas";
-            this.dgBandas.ReadOnly = true;
-            this.dgBandas.RowHeadersWidth = 51;
-            this.dgBandas.RowTemplate.Height = 29;
-            this.dgBandas.Size = new System.Drawing.Size(1196, 364);
-            this.dgBandas.TabIndex = 0;
+            this.dgPedidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgPedidos.BackgroundColor = System.Drawing.Color.White;
+            this.dgPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPedidos.Location = new System.Drawing.Point(84, 106);
+            this.dgPedidos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dgPedidos.Name = "dgPedidos";
+            this.dgPedidos.ReadOnly = true;
+            this.dgPedidos.RowHeadersWidth = 51;
+            this.dgPedidos.RowTemplate.Height = 29;
+            this.dgPedidos.Size = new System.Drawing.Size(1196, 364);
+            this.dgPedidos.TabIndex = 0;
             // 
             // tabAlterar
             // 
-            this.tabAlterar.Controls.Add(this.cbAlteraGenero);
-            this.tabAlterar.Controls.Add(this.txtAlteraRanking);
+            this.tabAlterar.Controls.Add(this.cbAlteraForma);
+            this.tabAlterar.Controls.Add(this.txtAlteraPrioridade);
             this.tabAlterar.Controls.Add(this.label7);
-            this.tabAlterar.Controls.Add(this.txtAlteraIntegrantes);
-            this.tabAlterar.Controls.Add(this.txtAlteraNome);
+            this.tabAlterar.Controls.Add(this.txtAlteraQuantidade);
+            this.tabAlterar.Controls.Add(this.txtAlteraPaciente);
             this.tabAlterar.Controls.Add(this.label8);
             this.tabAlterar.Controls.Add(this.label9);
             this.tabAlterar.Controls.Add(this.label10);
@@ -455,25 +455,25 @@
             this.tabAlterar.Text = "Alterar";
             this.tabAlterar.UseVisualStyleBackColor = true;
             // 
-            // cbAlteraGenero
+            // cbAlteraForma
             // 
-            this.cbAlteraGenero.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.cbAlteraGenero.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cbAlteraGenero.FormattingEnabled = true;
-            this.cbAlteraGenero.Location = new System.Drawing.Point(255, 117);
-            this.cbAlteraGenero.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cbAlteraGenero.Name = "cbAlteraGenero";
-            this.cbAlteraGenero.Size = new System.Drawing.Size(956, 53);
-            this.cbAlteraGenero.TabIndex = 23;
+            this.cbAlteraForma.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cbAlteraForma.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cbAlteraForma.FormattingEnabled = true;
+            this.cbAlteraForma.Location = new System.Drawing.Point(255, 117);
+            this.cbAlteraForma.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cbAlteraForma.Name = "cbAlteraForma";
+            this.cbAlteraForma.Size = new System.Drawing.Size(956, 53);
+            this.cbAlteraForma.TabIndex = 23;
             // 
-            // txtAlteraRanking
+            // txtAlteraPrioridade
             // 
-            this.txtAlteraRanking.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtAlteraRanking.Location = new System.Drawing.Point(255, 277);
-            this.txtAlteraRanking.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtAlteraRanking.Name = "txtAlteraRanking";
-            this.txtAlteraRanking.Size = new System.Drawing.Size(956, 44);
-            this.txtAlteraRanking.TabIndex = 20;
+            this.txtAlteraPrioridade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtAlteraPrioridade.Location = new System.Drawing.Point(255, 277);
+            this.txtAlteraPrioridade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAlteraPrioridade.Name = "txtAlteraPrioridade";
+            this.txtAlteraPrioridade.Size = new System.Drawing.Size(956, 44);
+            this.txtAlteraPrioridade.TabIndex = 20;
             // 
             // label7
             // 
@@ -485,25 +485,25 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(143, 37);
             this.label7.TabIndex = 21;
-            this.label7.Text = "Ranking:";
+            this.label7.Text = "Prioridade:";
             // 
-            // txtAlteraIntegrantes
+            // txtAlteraQuantidade
             // 
-            this.txtAlteraIntegrantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtAlteraIntegrantes.Location = new System.Drawing.Point(255, 200);
-            this.txtAlteraIntegrantes.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.txtAlteraIntegrantes.Name = "txtAlteraIntegrantes";
-            this.txtAlteraIntegrantes.Size = new System.Drawing.Size(956, 44);
-            this.txtAlteraIntegrantes.TabIndex = 19;
+            this.txtAlteraQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtAlteraQuantidade.Location = new System.Drawing.Point(255, 200);
+            this.txtAlteraQuantidade.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtAlteraQuantidade.Name = "txtAlteraQuantidade";
+            this.txtAlteraQuantidade.Size = new System.Drawing.Size(956, 44);
+            this.txtAlteraQuantidade.TabIndex = 19;
             // 
-            // txtAlteraNome
+            // txtAlteraPaciente
             // 
-            this.txtAlteraNome.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtAlteraNome.Location = new System.Drawing.Point(255, 42);
-            this.txtAlteraNome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.txtAlteraNome.Name = "txtAlteraNome";
-            this.txtAlteraNome.Size = new System.Drawing.Size(956, 50);
-            this.txtAlteraNome.TabIndex = 17;
+            this.txtAlteraPaciente.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtAlteraPaciente.Location = new System.Drawing.Point(255, 42);
+            this.txtAlteraPaciente.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtAlteraPaciente.Name = "txtAlteraPaciente";
+            this.txtAlteraPaciente.Size = new System.Drawing.Size(956, 50);
+            this.txtAlteraPaciente.TabIndex = 17;
             // 
             // label8
             // 
@@ -515,7 +515,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(185, 37);
             this.label8.TabIndex = 16;
-            this.label8.Text = "Integrantes:";
+            this.label8.Text = "Quantidade:";
             // 
             // label9
             // 
@@ -527,7 +527,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(132, 37);
             this.label9.TabIndex = 15;
-            this.label9.Text = "Genero:";
+            this.label9.Text = "Forma:";
             // 
             // label10
             // 
@@ -539,7 +539,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(112, 37);
             this.label10.TabIndex = 14;
-            this.label10.Text = "Nome:";
+            this.label10.Text = "Paciente:";
             // 
             // btnConfirmaAlteracao
             // 
@@ -616,7 +616,7 @@
             this.tabCadastrar.PerformLayout();
             this.tabBuscar.ResumeLayout(false);
             this.tabBuscar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgBandas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPedidos)).EndInit();
             this.tabAlterar.ResumeLayout(false);
             this.tabAlterar.PerformLayout();
             this.ResumeLayout(false);
@@ -639,31 +639,31 @@
         private System.Windows.Forms.TabPage tabCadastrar;
         private System.Windows.Forms.TabPage tabBuscar;
         private System.Windows.Forms.Button BtnConfirmaCadastro;
-        private System.Windows.Forms.TextBox txtintegrantes;
-        private System.Windows.Forms.TextBox txtnome;
+        private System.Windows.Forms.TextBox txtquantidade;
+        private System.Windows.Forms.TextBox txtpaciente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel marcador;
-        private System.Windows.Forms.TextBox txtranking;
+        private System.Windows.Forms.TextBox txtprioridade;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dgBandas;
+        private System.Windows.Forms.DataGridView dgPedidos;
         private System.Windows.Forms.Label lblMensagem;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtBusca;
-        private System.Windows.Forms.Button btnRemoveBanda;
+        private System.Windows.Forms.Button btnRemovePedido;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.TabPage tabAlterar;
-        private System.Windows.Forms.TextBox txtAlteraRanking;
+        private System.Windows.Forms.TextBox txtAlteraPrioridade;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnConfirmaAlteracao;
-        private System.Windows.Forms.TextBox txtAlteraIntegrantes;
-        private System.Windows.Forms.TextBox txtAlteraNome;
+        private System.Windows.Forms.TextBox txtAlteraQuantidade;
+        private System.Windows.Forms.TextBox txtAlteraPaciente;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cbGenero;
-        private System.Windows.Forms.Button bntAddGenero;
-        private System.Windows.Forms.ComboBox cbAlteraGenero;
+        private System.Windows.Forms.ComboBox cbForma;
+        private System.Windows.Forms.Button bntAddForma;
+        private System.Windows.Forms.ComboBox cbAlteraForma;
     }
 }

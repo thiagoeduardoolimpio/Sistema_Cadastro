@@ -8,21 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemaCadastro
+namespace SistemaFarmacia
 {
-    public partial class FrmAddGenero : Form
+    public partial class FrmAddForma : Form
     {
-        public FrmAddGenero()
+        public FrmAddForma()
         {
             InitializeComponent();
         }
 
-        private void FrmAddGenero_Load(object sender, EventArgs e)
+        private void FrmAddForma_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void txtnome_TextChanged(object sender, EventArgs e)
+        private void txtpaciente_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -30,13 +30,13 @@ namespace SistemaCadastro
         private void BtnConfirmaCadastro_Click(object sender, EventArgs e)
         {
             conectaBanco con = new conectaBanco();
-            bool retorno = con.insereGenero(txtaddgenero.Text);
+            bool retorno = con.insereForma(txtaddforma.Text);
             if (retorno == false)
                 MessageBox.Show(con.mensagem);
             else
-                MessageBox.Show("Genero adicionado com sucesso");
-            txtaddgenero.Clear();
-            txtaddgenero.Focus();
+                MessageBox.Show("Forma adicionada com sucesso");
+            txtaddforma.Clear();
+            txtaddforma.Focus();
         }
 
         private void label4_Click(object sender, EventArgs e)

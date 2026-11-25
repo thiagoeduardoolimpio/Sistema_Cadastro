@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaCadastro", "SistemaCadastro\SistemaCadastro.csproj", "{96CFD860-8402-4B0B-B0D9-65A990C45932}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaFarmacia", "SistemaFarmacia\SistemaFarmacia.csproj", "{96CFD860-8402-4B0B-B0D9-65A990C45932}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

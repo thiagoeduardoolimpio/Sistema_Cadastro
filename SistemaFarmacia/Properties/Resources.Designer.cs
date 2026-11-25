@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SistemaCadastro.Properties {
+namespace SistemaFarmacia.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace SistemaCadastro.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SistemaCadastro.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SistemaFarmacia.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -93,9 +93,9 @@ namespace SistemaCadastro.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rock_and_roll {
+        internal static System.Drawing.Bitmap farmacia {
             get {
-                object obj = ResourceManager.GetObject("rock-and-roll", resourceCulture);
+                object obj = ResourceManager.GetObject("farmacia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

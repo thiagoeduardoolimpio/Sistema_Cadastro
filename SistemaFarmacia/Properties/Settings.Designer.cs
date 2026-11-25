@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SistemaCadastro.Properties
+namespace SistemaFarmacia.Properties
 {
 
 
