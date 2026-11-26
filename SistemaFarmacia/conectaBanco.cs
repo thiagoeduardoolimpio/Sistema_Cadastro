@@ -10,6 +10,8 @@ namespace SistemaFarmacia
 {
     internal class conectaBanco
     {
+
+
         MySqlConnection conexao = new MySqlConnection(new MySqlConnectionStringBuilder
         {
             Server = "localhost",
@@ -27,6 +29,7 @@ namespace SistemaFarmacia
                     new MySqlCommand("sp_inserePedido", conexao);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("p_paciente", novoPedido.Paciente);
+                cmd.Parameters.AddWithValue("p_medicamento", novoPedido.Medicamento);
                 cmd.Parameters.AddWithValue("p_quantidade", novoPedido.Quantidade);
                 cmd.Parameters.AddWithValue("p_prioridade", novoPedido.Prioridade);
                 cmd.Parameters.AddWithValue("p_forma", novoPedido.Forma);
@@ -67,6 +70,7 @@ namespace SistemaFarmacia
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("p_idpedido", idpedido);
             cmd.Parameters.AddWithValue("p_paciente", b.Paciente);
+            cmd.Parameters.AddWithValue("p_medicamento", b.Medicamento);
             cmd.Parameters.AddWithValue("p_forma", b.Forma);
             cmd.Parameters.AddWithValue("p_quantidade", b.Quantidade);
             cmd.Parameters.AddWithValue("p_prioridade", b.Prioridade);

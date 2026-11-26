@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace SistemaFarmacia
 {
-     class Pedido
+    class Pedido
     {
         string paciente;
+        string medicamento;
         int quantidade;
         int prioridade;
         int forma;
 
         public string Paciente { get => paciente; set => paciente = value; }
+        public string Medicamento { get => medicamento; set => medicamento = value; }
         public int Quantidade { get => quantidade; set => quantidade = value; }
         public int Prioridade { get => prioridade; set => prioridade = value; }
         public int Forma { get => forma; set => forma = value; }

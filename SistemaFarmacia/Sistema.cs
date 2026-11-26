@@ -17,9 +17,9 @@ namespace SistemaFarmacia
         public Sistema()
         {
             InitializeComponent();
-            
+
         }
-        
+
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -31,7 +31,7 @@ namespace SistemaFarmacia
             marcador.Top = btnCadastra.Top;
             tabControl1.SelectedTab = tabControl1.TabPages[0];
         }
-        
+
 
         private void btnBusca_Click(object sender, EventArgs e)
         {
@@ -70,7 +70,7 @@ namespace SistemaFarmacia
         {
             (dgPedidos.DataSource as DataTable).DefaultView.RowFilter =
                 string.Format("paciente like '{0}%'", txtBusca.Text);
-        
+
         }
 
         private void btnRemovePedido_Click(object sender, EventArgs e)
@@ -104,6 +104,8 @@ namespace SistemaFarmacia
               dgPedidos.Rows[linha].Cells["idpedidos"].Value.ToString());
             txtAlteraPaciente.Text =
                  dgPedidos.Rows[linha].Cells["paciente"].Value.ToString();
+            txtAlteraMedicamento.Text =
+                dgPedidos.Rows[linha].Cells["medicamento"].Value.ToString();
             txtAlteraQuantidade.Text =
                 dgPedidos.Rows[linha].Cells["quantidade"].Value.ToString();
             txtAlteraPrioridade.Text =
@@ -113,21 +115,22 @@ namespace SistemaFarmacia
             tabControl1.SelectedTab = tabAlterar;// muda aba
         }
 
-         private void btnConfirmaAlteracao_Click(object sender, EventArgs e)
+        private void btnConfirmaAlteracao_Click(object sender, EventArgs e)
         {
 
             conectaBanco con = new conectaBanco();
             Pedido novoPedido = new Pedido();
             novoPedido.Paciente = txtAlteraPaciente.Text;
+            novoPedido.Medicamento = txtAlteraMedicamento.Text;
             novoPedido.Quantidade = Convert.ToInt32(txtAlteraQuantidade.Text);
             novoPedido.Prioridade = Convert.ToInt32(txtAlteraPrioridade.Text);
-            novoPedido.Forma = Convert.ToInt32(cbAlteraForma .SelectedValue.ToString());
+            novoPedido.Forma = Convert.ToInt32(cbAlteraForma.SelectedValue.ToString());
             bool retorno = con.alteraPedido(novoPedido, idAlterar);
             if (retorno == false)
                 MessageBox.Show(con.mensagem);
             else
                 MessageBox.Show(" alteracao realizada com sucesso! ");
-            
+
             limpaCampos();
             lista_gridPedidos();
 
@@ -144,6 +147,7 @@ namespace SistemaFarmacia
         void limpaCampos()
         {
             txtpaciente.Clear();
+            txtmedicamento.Clear();
             cbForma.Text = "";
             txtquantidade.Clear();
             txtprioridade.Clear();
@@ -155,6 +159,7 @@ namespace SistemaFarmacia
             conectaBanco con = new conectaBanco();
             Pedido novoPedido = new Pedido();
             novoPedido.Paciente = txtpaciente.Text;
+            novoPedido.Medicamento = txtmedicamento.Text;
             novoPedido.Quantidade = Convert.ToInt32(txtquantidade.Text);
             novoPedido.Prioridade = Convert.ToInt32(txtprioridade.Text);
             novoPedido.Forma = Convert.ToInt32(cbForma.SelectedValue.ToString());
