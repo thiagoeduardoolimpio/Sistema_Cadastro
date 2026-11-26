@@ -52,7 +52,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(123)))));
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -71,7 +71,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(92)))));
             this.panel1.Controls.Add(this.marcador);
             this.panel1.Controls.Add(this.btnBusca);
             this.panel1.Controls.Add(this.btnCadastra);
@@ -84,7 +84,7 @@
             // 
             // marcador
             // 
-            this.marcador.BackColor = System.Drawing.Color.Firebrick;
+            this.marcador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(222)))), ((int)(((byte)(234)))));
             this.marcador.Location = new System.Drawing.Point(2, 131);
             this.marcador.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.marcador.Name = "marcador";
@@ -94,7 +94,9 @@
             // btnBusca
             // 
             this.btnBusca.FlatAppearance.BorderSize = 0;
+            this.btnBusca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(98)))), ((int)(((byte)(116)))));
             this.btnBusca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBusca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(92)))));
             this.btnBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnBusca.ForeColor = System.Drawing.Color.White;
             this.btnBusca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -105,12 +107,14 @@
             this.btnBusca.TabIndex = 5;
             this.btnBusca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBusca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBusca.UseVisualStyleBackColor = true;
+            this.btnBusca.UseVisualStyleBackColor = false;
             // 
             // btnCadastra
             // 
             this.btnCadastra.FlatAppearance.BorderSize = 0;
+            this.btnCadastra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(98)))), ((int)(((byte)(116)))));
             this.btnCadastra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(92)))));
             this.btnCadastra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCadastra.ForeColor = System.Drawing.Color.White;
             this.btnCadastra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -121,7 +125,7 @@
             this.btnCadastra.TabIndex = 3;
             this.btnCadastra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCadastra.UseVisualStyleBackColor = true;
+            this.btnCadastra.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -136,9 +140,11 @@
             // BtnConfirmaCadastro
             // 
             this.BtnConfirmaCadastro.FlatAppearance.BorderSize = 0;
+            this.BtnConfirmaCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
             this.BtnConfirmaCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnConfirmaCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
             this.BtnConfirmaCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.BtnConfirmaCadastro.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnConfirmaCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(96)))), ((int)(((byte)(87)))));
             this.BtnConfirmaCadastro.Image = global::SistemaFarmacia.Properties.Resources.adicionar;
             this.BtnConfirmaCadastro.Location = new System.Drawing.Point(383, 315);
             this.BtnConfirmaCadastro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -148,7 +154,7 @@
             this.BtnConfirmaCadastro.Text = "&Cadastrar";
             this.BtnConfirmaCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnConfirmaCadastro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnConfirmaCadastro.UseVisualStyleBackColor = true;
+            this.BtnConfirmaCadastro.UseVisualStyleBackColor = false;
             this.BtnConfirmaCadastro.Click += new System.EventHandler(this.BtnConfirmaCadastro_Click);
             // 
             // txtaddforma
@@ -165,7 +171,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.label4.Location = new System.Drawing.Point(264, 206);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -182,13 +188,14 @@
             this.btnFechar.Size = new System.Drawing.Size(45, 40);
             this.btnFechar.TabIndex = 17;
             this.btnFechar.Text = "X";
-            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // FrmAddForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.BtnConfirmaCadastro);

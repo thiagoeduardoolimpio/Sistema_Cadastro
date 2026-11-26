@@ -10,9 +10,13 @@ namespace SistemaFarmacia
 {
     internal class conectaBanco
     {
-
-
-        MySqlConnection conexao = new MySqlConnection("server=localhost;user id=root; password=thiago260507.;database=bancofarmacia");
+        MySqlConnection conexao = new MySqlConnection(new MySqlConnectionStringBuilder
+        {
+            Server = "localhost",
+            UserID = Environment.GetEnvironmentVariable("FARMACIA_DB_USUARIO") ?? "farmacia",
+            Password = Environment.GetEnvironmentVariable("FARMACIA_DB_SENHA") ?? "farmacia123",
+            Database = "bancofarmacia"
+        }.ConnectionString);
         public string mensagem;
         public bool inserePedido(Pedido novoPedido)
         {
